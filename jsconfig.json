@@ -4,5 +4,9 @@
       "@/*": ["./src/*"]
     }
   },
+  "vueCompilerOptions": {
+    "target": 3.5,
+    "plugins": []
+  },
   "exclude": ["node_modules", "dist"]
 }
