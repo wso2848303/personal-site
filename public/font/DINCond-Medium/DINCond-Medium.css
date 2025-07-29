@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'DINCond-Medium';
+  src: url("/font/DINCond-Medium/DINCond-Medium.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  font-style: normal;
+  font-weight: normal;
+}

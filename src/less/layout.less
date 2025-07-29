@@ -1,0 +1,84 @@
+.loop-mt(@num)when(@num < 161) {
+  .mt-@{num} {
+    margin-top: ~'@{num}px';
+  }
+  .mr-@{num} {
+    margin-right: ~'@{num}px';
+  }
+  .mb-@{num} {
+    margin-bottom: ~'@{num}px';
+  }
+  .ml-@{num} {
+    margin-left: ~'@{num}px';
+  }
+  .pd-@{num} {
+    padding: ~'@{num}px';
+  }
+  .pt-@{num} {
+    padding-top: ~'@{num}px';
+  }
+  .pr-@{num} {
+    padding-right: ~'@{num}px';
+  }
+  .pb-@{num} {
+    padding-bottom: ~'@{num}px';
+  }
+  .pl-@{num} {
+    padding-left: ~'@{num}px';
+  }
+  .loop-mt(@num + 1);
+}
+.loop-mt(0);
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.weak-scroll-bar {
+  --scroll-bar-transition: all 0.15s ease;
+  /**
+  * 自定义滚动条样式，鼠标移开时透明，鼠标悬停时淡入
+  */
+  /* 启用平滑滚动 */
+  scroll-behavior: smooth;
+  /* 优化滚动性能 */
+  -webkit-overflow-scrolling: touch;
+  overflow-behavior: smooth;
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+    transition: var(--scroll-bar-transition);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 6px;
+    transition: var(--scroll-bar-transition);
+    /* 添加悬停时的视觉反馈 */
+    &:hover {
+      background: rgba(180, 180, 200, 0.3) !important;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    transition: var(--scroll-bar-transition);
+  }
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+  transition: var(--scroll-bar-transition);
+  
+  /* 鼠标悬停时显示滚动条 */
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: rgba(180, 180, 200, 0.18);
+    }
+    scrollbar-color: rgba(180, 180, 200, 0.18) transparent; /* Firefox */
+  }
+}
+:root {
+  --sat: env(safe-area-inset-top);
+  --sar: env(safe-area-inset-right);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+}

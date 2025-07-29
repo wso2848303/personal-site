@@ -1,0 +1,246 @@
+@import './text.less';
+@import './color.less';
+@import './layout.less';
+@import './radius.less';
+@import './shadow.less';
+@import './keyframes.less';
+@import './plugins.less';
+@import './card.less';
+html,
+body,
+.__app-wrapper#app {
+  width: 100%;
+  margin: 0;
+  font-family: 'PingFang SC', 'Arial', 'Microsoft YaHei', 'sans-serif';
+  &:has(._component-modal) {
+    // height: 100%;
+    overflow: hidden;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+.disabled {
+  cursor: not-allowed;
+}
+.pointer {
+  cursor: pointer;
+}
+.underline {
+  text-decoration: underline;
+}
+.clear-both {
+  clear: both;
+}
+.pc-only {
+  display: block;
+}
+.m-only {
+  display: none;
+}
+.fw-normal {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 600;
+}
+.italic {
+  font-style: italic;
+}
+.nowrap {
+  white-space: nowrap;
+}
+a {
+  color: @color-violet-default;
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.clear {
+  clear: both;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.float-wrap {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+.block-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .block-card {
+    margin-top: 12px;
+  }
+}
+.block-card {
+  --width: 49%;
+  --padding: 16px;
+  --background-color: var(--color-gray-7);
+  --box-shadow: none;
+  width: var(--width);
+  background-color: var(--background-color);
+  border-radius: var(--radius-1);
+  padding: var(--padding);
+  box-shadow: var(--box-shadow);
+  &.small {
+    --width: 32%;
+  }
+  &.big {
+    --width: 100%;
+  }
+  &.highlight {
+    --background-color: var(--color-red-light);
+  }
+  &.pink {
+    --background-color: var(--color-pink-background);
+  }
+  &.violet {
+    --background-color: var(--color-violet-background);
+  }
+  &.blue {
+    --background-color: var(--color-blue-background);
+  }
+  &.green {
+    --background-color: var(--color-green-background);
+  }
+  &.yellow {
+    --background-color: var(--color-yellow-background);
+  }
+  &.white {
+    --background-color: var(--color-white-1);
+  }
+  &.shadow {
+    --box-shadow: var(--shadow-default);
+  }
+}
+.table, .table.el-table {
+  --el-bg-color: var(--color-gray-6);
+  --el-table-border-color: var(--color-gray-5);
+  --el-text-color-secondary: var(--color-gray-3);
+  --el-table-text-color: var(--color-gray-2);
+  th {
+    padding: 12px;
+    .text1();
+  }
+  td {
+    padding: 12px;
+    .text1();
+  }
+}
+.table {
+  border: 1px solid var(--color-gray-5);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  min-width: 500px;
+  border-spacing: 0;
+  tr {
+    &:last-of-type {
+      td {
+        border-bottom: none;
+      }
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+  td {
+    border-right: 1px solid var(--color-gray-5);
+    border-bottom: 1px solid var(--color-gray-5);
+    &:last-of-type {
+      border-right: none;
+    }
+    &.no-border-bottom {
+      border-bottom: none;
+    }
+    &.no-border-right {
+      border-right: none;
+    }
+  }
+  th {
+    background: var(--color-gray-7);
+    border-bottom: 1px solid var(--color-gray-5);
+    border-right: 1px solid var(--color-gray-5);
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
+.text-ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+._developer-view-wrap {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9999999999;
+  background: rgba(0,0,0,.5);
+  padding: 5px;
+  display: flex;
+}
+.team-level {
+  position: relative;
+  &.standard,&.guided {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 3px;
+      background-size: 100% 100%;
+      height: 16px;
+      width: 74px;
+      transform: translate(-50%, 0);
+    }
+  }
+  &.standard::after {
+    background-image: url(//ctb20.oss-cn-hangzhou.aliyuncs.com/web22-23/icons/grade/team-standard.png);
+  }
+  &.guided::after {
+    background-image: url(//ctb20.oss-cn-hangzhou.aliyuncs.com/web22-23/icons/grade/team-guided.png);
+  }
+}
+.user-level {
+  display: block;
+  background-size: 100% 100%;
+  flex-shrink: 0;
+  &.standard {
+    width: 70px;
+    height: 11px;
+    background-image: url(//ctb20.oss-cn-hangzhou.aliyuncs.com/web22-23/dashboard/user/img-1.png);
+  }
+  &.guided {
+    width: 49px;
+    height: 11px;
+    background-image: url(//ctb20.oss-cn-hangzhou.aliyuncs.com/web22-23/dashboard/user/img-2.png);
+  }
+}
+.media-m({
+  .pc-only {
+    display: none;
+  }
+  .m-only {
+    display: block;
+  }
+  .block-card {
+    width: 100% !important;
+  }
+});

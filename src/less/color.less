@@ -1,0 +1,52 @@
+.color(@str) {
+  --color-@{str}: ~'@{color-@{str}}';
+  .color-@{str} {
+    color: ~'@{color-@{str}}';
+  }
+  .bg-@{str} {
+    background-color: ~'@{color-@{str}}';
+  }
+  .marker-@{str} {
+    li::marker {
+      color: ~'@{color-@{str}}';
+    }
+  }
+}
+:root {
+  .color(violet-default);
+  .color(violet-light);
+  .color(violet-dark);
+  .color(violet-background);
+  .color(yellow-default);
+  .color(yellow-light);
+  .color(yellow-dark);
+  .color(yellow-background);
+  .color(gray-1);
+  .color(gray-2);
+  .color(gray-3);
+  .color(gray-4);
+  .color(gray-5);
+  .color(gray-6);
+  .color(gray-7);
+  .color(gray-8);
+  .color(brown-dark);
+  .color(brown-light);
+  .color(white-1);
+  .color(white-2);
+  .color(white-3);
+  .color(black-1);
+  .color(black-2);
+  .color(black-3);
+  .color(red-default);
+  .color(red-dark);
+  .color(red-light);
+  .color(green);
+  .color(green-background);
+  .color(green-light);
+  .color(pink);
+  .color(pink-background);
+  .color(blue);
+  .color(blue-background);
+  .color(team-building);
+  .color(background);
+}

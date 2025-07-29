@@ -1,0 +1,174 @@
+@import url('/font/DINCond-Black/DINCond-Black.css');
+@import url('/font/DINCond-Medium/DINCond-Medium.css');
+h1 {
+  .h1();
+}
+h2 {
+  .h2();
+}
+h3 {
+  .h3();
+}
+h4 {
+  .h4();
+}
+h5 {
+  .h5();
+}
+.h1 {
+  .h1();
+}
+.h2 {
+  .h2();
+}
+.h3 {
+  .h3();
+}
+.h4 {
+  .h4();
+}
+.h5 {
+  .h5();
+}
+.h1-m {
+  .h1-m();
+}
+.h2-m {
+  .h2-m();
+}
+.h3-m {
+  .h3-m();
+}
+.h4-m {
+  .h4-m();
+}
+.h5-m {
+  .h5-m();
+}
+.text1 {
+  .text1();
+}
+.text2 {
+  .text2();
+}
+.text3 {
+  .text3();
+}
+.t-ct {
+  text-align: center;
+}
+.t-rt {
+  text-align: right;
+}
+.t-lt {
+  text-align: left;
+}
+.t-just {
+  text-align: justify;
+}
+.t-gradient {
+  .t-gradient();
+}
+.ol {
+  li {
+    padding-left: 8px;
+  }
+  > li > .ul {
+    margin-left: 26px;
+  }
+  .ol {
+    margin-left: 26px;
+  }
+  > li > p:not(.ol-num) {
+    margin-left: 26px;
+  }
+}
+.ul {
+  li {
+    padding-left: 8px;
+    margin-left: 26px;
+    &::marker {
+      color: @color-violet-default;
+    }
+  }
+  &.decimal {
+    list-style: decimal;
+  }
+  &.disc {
+    list-style: disc;
+  }
+  &.circle {
+    list-style: circle;
+  }
+  &.square {
+    list-style: square;
+  }
+  &.upper-alpha {
+    list-style: upper-alpha;
+  }
+  &.alpha {
+    list-style: lower-alpha;
+  }
+  &.upper-roman {
+    list-style: upper-roman;
+  }
+  &.roman {
+    list-style: lower-roman;
+  }
+  &.chinese {
+    list-style: cjk-ideographic;
+    li {
+      margin-left: 34px;
+    }
+  }
+  &.checker {
+    list-style: none;
+    > li {
+      position: relative;
+      flex-shrink: 0;
+      &::before {
+        position: absolute;
+        left: -20px;
+        top: 8px;
+        color: var(--color-gray-2);
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        border: 1px solid var(--color-gray-2);
+      }
+    }
+  }
+  &.marker-bold {
+    li::marker {
+      font-weight: 600;
+    }
+  }
+  &.no-marker {
+    list-style: none;
+  }
+}
+.din {
+  font-family: 'DINCond-Black';
+}
+.din-m {
+  font-family: 'DINCond-Medium';
+}
+.media-m({
+  .h1 {
+    .h1-m();
+  }
+  .h2 {
+    .h2-m();
+  }
+  .h3 {
+    .h3-m();
+  }
+  .h4 {
+    .h4-m();
+  }
+  .h5 {
+    .h5-m();
+  }
+});
