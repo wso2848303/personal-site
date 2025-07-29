@@ -20,29 +20,15 @@
       <!-- 时间信息 -->
       <div class="time-section">
         <h2 class="h2 color-gray-1 mt-24">时间</h2>
-        <div class="time-details">
-          <p class="text1 color-gray-2 mt-12">2025年10月19日</p>
-          <p class="text1 color-gray-2 mt-12">晚上 18:00</p>
-          <p class="text1 color-gray-2 mt-12">星期日</p>
-        </div>
+        <div class="time-details"></div>
       </div>
 
       <!-- 地点信息 -->
       <div class="location-section">
         <h2 class="h2 color-gray-1 mt-24">地点</h2>
-        <div class="location-details">
-          <p class="text1 color-gray-2 mt-12">东湖宾馆东湖厅</p>
-          <p class="text1 color-gray-2 mt-12">上海市徐汇区东湖路70号（原榆餐厅）</p>
-          <p class="text1 color-gray-2 mt-12">靠近新乐路、富民路和襄阳北路</p>
-        </div>
+        <div class="location-details"></div>
         <div class="text1 color-gray-2 mt-12">导航：</div>
-        <div class="text1 color-gray-2 mt-12">
-          <a
-            href="https://map.baidu.com/poi/%E4%B8%9C%E6%B9%96%E5%AE%BE%E9%A6%86%C2%B7%E5%AE%B4%E4%BC%9A%E5%8E%85/@13521004.66372267,3639443.206720382,18.63z?uid=cdef4edf3e73aa5728d7ab2c&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl"
-            target="_blank"
-            >https://map.baidu.com/poi/东湖宾馆·宴会厅</a
-          >
-        </div>
+        <div class="text1 color-gray-2 mt-12"></div>
       </div>
 
       <!-- 就餐安排 -->
