@@ -1,0 +1,33 @@
+# Less 样式开发规范
+
+## 样式文件组织
+
+- 全局样式：[src/less/global.less](mdc:src/less/global.less)
+- 样式变量和函数：[src/less/arguments/](mdc:src/less/arguments/)
+- 组件样式：放在组件目录下，如 [src/views/InvitationLetter/index.less](mdc:src/views/InvitationLetter/index.less)
+
+## 样式变量使用
+
+- 颜色变量：[src/less/arguments/colors.less](mdc:src/less/arguments/colors.less)
+- 布局变量：[src/less/arguments/layout.less](mdc:src/less/arguments/layout.less)
+- 文本变量：[src/less/arguments/text.less](mdc:src/less/arguments/text.less)
+- 边框变量：[src/less/arguments/border.less](mdc:src/less/arguments/border.less)
+- 阴影变量：[src/less/arguments/shadows.less](mdc:src/less/arguments/shadows.less)
+
+## 字体配置
+
+- 自定义字体文件在 [public/font/](mdc:public/font/) 目录
+- 包含 DINCond 和 OPPOSans 字体系列
+- 字体样式文件按用途分类（dashboard/home）
+
+## 样式规范
+
+- 使用 BEM 命名规范
+- 优先使用预定义的样式变量
+- 组件样式使用 `scoped` 避免全局污染
+- 响应式设计使用预定义的断点变量
+  description:
+  globs:
+  alwaysApply: false
+
+---

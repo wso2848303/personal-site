@@ -1,0 +1,40 @@
+# 项目结构指南
+
+这是一个基于 Vue 3 + Vite 的个人网站项目。
+
+## 核心文件
+
+- 主入口文件：[src/main.js](mdc:src/main.js)
+- 根组件：[src/App.vue](mdc:src/App.vue)
+- 路由配置：[src/router/index.js](mdc:src/router/index.js)
+- 全局样式：[src/less/global.less](mdc:src/less/global.less)
+
+## 项目配置
+
+- 构建配置：[vite.config.js](mdc:vite.config.js)
+- 依赖管理：[package.json](mdc:package.json)
+- 部署配置：[netlify.toml](mdc:netlify.toml)
+- ESLint 配置：[eslint.config.js](mdc:eslint.config.js)
+
+## 页面组件
+
+- 邀请函页面：[src/views/InvitationLetter/index.vue](mdc:src/views/InvitationLetter/index.vue)
+- 邀请函样式：[src/views/InvitationLetter/index.less](mdc:src/views/InvitationLetter/index.less)
+
+## 样式系统
+
+项目使用 Less 预处理器，样式文件位于 [src/less/](mdc:src/less/) 目录：
+
+- 全局样式：[src/less/global.less](mdc:src/less/global.less)
+- 颜色变量：[src/less/arguments/colors.less](mdc:src/less/arguments/colors.less)
+- 布局工具：[src/less/arguments/layout.less](mdc:src/less/arguments/layout.less)
+- 文本样式：[src/less/arguments/text.less](mdc:src/less/arguments/text.less)
+
+## 静态资源
+
+字体文件位于 [public/font/](mdc:public/font/) 目录，包含 DINCond 和 OPPOSans 字体。
+description:
+globs:
+alwaysApply: false
+
+---
